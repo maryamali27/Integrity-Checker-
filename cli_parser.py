@@ -3,6 +3,7 @@
 import argparse
 
 def parse_args():
+    """Parse command-line arguments."""
     parser = argparse.ArgumentParser(description="File Integrity Checker")
     subparsers = parser.add_subparsers(dest='command')
 
