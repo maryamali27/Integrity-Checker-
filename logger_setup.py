@@ -9,7 +9,7 @@ def setup_logging():
     """Configure logging to file."""
     logging.basicConfig(
         filename='integrity_checker.log',
-        level=logging.DEBUG,  # Capture all logs
+        level=logging.DEBUG,  # Capture all logs (DEBUG, INFO, WARNING, ERROR)
         format='%(asctime)s - %(levelname)s - %(message)s'
     )
 
