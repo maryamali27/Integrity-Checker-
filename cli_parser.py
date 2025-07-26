@@ -1,11 +1,8 @@
-#!/usr/bin/env python3
-"""
-Command-line argument parser.
-"""
+ #!/usr/bin/env python3
+# Command-line argument parser.
 import argparse
 
 def parse_args():
-    """Parse command-line arguments."""
     parser = argparse.ArgumentParser(description="File Integrity Checker")
     subparsers = parser.add_subparsers(dest='command')
 
@@ -24,4 +21,5 @@ def parse_args():
     list_parser = subparsers.add_parser('list', help='List stored hashes')
     list_parser.add_argument('--hashfile', required=True, help='JSON file with saved hashes')
 
-    return parser.parse_args()
+    args = parser.parse_args()
+    return args
