@@ -1,10 +1,8 @@
-#!/usr/bin/env python3
-"""
-Hash verification utilities.
-"""
+ #!/usr/bin/env python3
 import json
 import os
-from hasher import compute_hashes
+
+from hasher import compute_hashes  # Ensure this is at the top of the file
 
 def verify_hashes(saved_hash_file, root_dir):
     """Verify current file hashes against a saved hash database."""
