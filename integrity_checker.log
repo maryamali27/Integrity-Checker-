@@ -1,1 +1,4 @@
 2025-07-21 18:25:14,826 - INFO - Hashes saved to hashes.json
+2025-07-26 20:50:28,962 - ERROR - Path '/etc' does not exist.
+2025-07-26 21:33:19,564 - ERROR - Path '/etc' does not exist.
+2025-07-26 21:47:21,973 - INFO - Hashes saved to hashes.json
