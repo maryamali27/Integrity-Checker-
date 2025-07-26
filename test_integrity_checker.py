@@ -1,5 +1,6 @@
 # (Unit Tests)
 #!/usr/bin/env python3
+import shutil
 """
 Unit tests for the Integrity Checker.
 """
