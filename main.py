@@ -17,9 +17,9 @@ def save_hashes(hashes, output_file):
     """Save computed hashes to a JSON file."""
     with open(output_file, 'w') as f:
         json.dump(hashes, f, indent=4)
-        os.fsync(f.fileno())  # ✅ Call fsync while the file is still open
+        os.fsync(f.fileno())  # ✅ Call fsync while the file is still open + Force write to disk 
     logging.info(f"Hashes saved to {output_file}")
-    os.fsync(f.fileno())  # Force flush to disk
+    #? os.fsync(f.fileno())  # Force flush to disk
 
 def main():
     args = parse_args()
@@ -59,6 +59,8 @@ def main():
         except FileNotFoundError:
             print(f"Hash file {args.hashfile} not found.")
             logging.error(f"Hash file {args.hashfile} not found.")
+    else:
+        print("Invalid command. Use --help for usage.")
 
 if __name__ == "__main__":
     main()
