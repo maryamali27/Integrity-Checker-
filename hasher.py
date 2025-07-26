@@ -1,15 +1,17 @@
-#!/usr/bin/env python3
-"""
-Hashing utilities for computing cryptographic hashes.
-"""
+ #!/usr/bin/env python3
+# Hashing utilities for computing cryptographic hashes.
 import os
 import hashlib
 
 def compute_hashes(path, algorithm='sha256'):
-    """Compute hashes for files in a directory or a single file."""
+    """Compute hashes for files/directories."""
     hashes = {}
     if os.path.isfile(path):
-        hashes[path] = hash_file(path, algorithm)
+        try:
+            hashes[path] = hash_file(path, algorithm)
+            print(f"Hashed file: {path}")  # Debug output
+        except Exception as e:
+            print(f"Error hashing {path}: {e}")
     elif os.path.isdir(path):
         for root, _, files in os.walk(path):
             for file in files:
