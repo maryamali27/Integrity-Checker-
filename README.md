@@ -31,20 +31,21 @@ Open a terminal and run:
 sudo apt update && sudo apt upgrade -y
 ```
    ```bash
+   sudo apt install python3-pip
    pip install -r requirements.txt
    ```
 
 #### 1. Compute hashes:
    ```bash
-   python main.py hash --path /etc --output hashes.json
+   python3 main.py hash --path /etc --output hashes.json
    ```
 #### 2. Verify hashes:
 ```bash
-   python main.py verify --hashfile hashes.json --dir /etc
+   python3 main.py verify --hashfile hashes.json --dir /etc
 ```
 #### 3. List stored hashes:
 ```bash
-   python main.py list --hashfile hashes.json
+   python3 main.py list --hashfile hashes.json
 ```
 ### 2. Install Python and Virtual Environment Tools
 ```bash
@@ -88,7 +89,7 @@ source venv/bin/activate
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 
 # Install pip
-python get-pip.py
+python3 get-pip.py
 
 # Install project dependencies
 pip install -r requirements.txt
@@ -128,6 +129,27 @@ python main.py list --hashfile hashes.json
 ```bash
 cat integrity_checker.log
 ```
+
+## try to delete file
+
+### 1. make sure at the right directory 
+```bash 
+source venv/bin/activate
+```
+### 2. delete file
+```bash 
+ls -la test_dir/
+rm test_dir/test_file.txt
+```
+### 3. verify commend
+```bash 
+python main.py verify --hashfile hashes.json --dir test_dir
+```
+### 4. check the Log file 
+```bash 
+cat integrity_checker.log
+```
+
 ## done by:
 - Maryam Ali Hasan 202209427
 - Nada Abdulaziz 202203864
