@@ -21,6 +21,10 @@ This project implements a utility that calculates the cryptographic hash of file
 ## Installation & Setup (Linux/WSL)
 Follow these steps to set up and run the project from scratch.
 
+- if u have account u should only write at the terminal --> **wsl**
+- if u don't have account u should write at the terminal --> **wsl --install**
+- if u want to uninstall --> **wsl --unregister Ubuntu**
+
 ### 1. Install dependencies:
 Open a terminal and run:
 ```bash
@@ -126,23 +130,9 @@ cat integrity_checker.log
 ```
 ## done by:
 - Maryam Ali Hasan 202209427
--
--
+- Nada Abdulaziz 202203864
+- Noora abdulatif 202308545
 
-
-
-PS C:\Users\meeme\Integrity-Checker-> sudo python main.py hash --path /etc --output hashes.json
-Sudo is disabled on this machine. To enable it, go to the Developer Settings page in the Settings app
-
-PS C:\Users\meeme\Integrity-Checker-\integrity_checker_project> wsl --install
-
-wsl --unregister Ubuntu
-
-Step 2: Install Python Package Manager (pip) --> sudo apt install python3-pip
-Step 3: Install Required Dependencies ---> pip3 install cryptography
-Step 4: Verify Project Files ---> ls
--->If files are missing, create them using nano:
----> Paste the code from your Windows files, then save and exit (Ctrl+O, Enter, Ctrl+X)
 
 ls -la ~/
 ls -la
