@@ -114,7 +114,7 @@ python main.py hash --path test_dir --output hashes.json
 python main.py verify --hashfile hashes.json --dir test_dir
 ```
 
-### 4. Modify a File nad Verify Again
+### 4. Modify a File and Verify Again
 ```bash
 echo "modified test content" > test_dir/test_file.txt
 python main.py verify --hashfile hashes.json --dir test_dir
